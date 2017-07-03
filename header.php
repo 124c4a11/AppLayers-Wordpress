@@ -27,7 +27,6 @@
 
 <body <?php body_class(); ?>>
 
-
   <header class="navbar-fixed-top">
     <div class="container">
       <div class="row">
@@ -37,7 +36,6 @@
               <a href="#"><?php the_custom_logo(); ?></a>
             </div>
           </div>
-
           <div class="col-md-10">
             <div class="menu_bar">
               <nav role="navigation" class="navbar navbar-default">
@@ -52,7 +50,6 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar">
-
                   <?php
                     wp_nav_menu(array(
                       'theme_location' => 'primary',
@@ -61,15 +58,10 @@
                       'menu_id' => ''
                     ));
                   ?>
-
                </div>
-
-
-
               </nav>
             </div>
           </div>
-
         </div>
       </div>
     </div>

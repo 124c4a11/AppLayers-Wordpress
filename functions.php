@@ -47,3 +47,8 @@ function applayers_scripts() {
   wp_enqueue_script( 'agency', get_template_directory_uri() . '/js/agency.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'applayers_scripts' );
+
+
+add_filter('excerpt_more', function($more) {
+  return '';
+});
