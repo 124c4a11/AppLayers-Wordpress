@@ -28,6 +28,8 @@ function applayers_setup() {
     'video',
     'gallery'
   ));
+
+  register_nav_menu('primary', 'Primary menu');
 }
 add_action('after_setup_theme', 'applayers_setup');
 
