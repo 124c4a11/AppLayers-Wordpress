@@ -34,11 +34,4 @@
 </body>
 
 <?php wp_footer(); ?>
-<!-- JS Plugins -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/css3-animate-it.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="js/agency.js"></script>
-
 </html>
