@@ -215,6 +215,7 @@ function applayers_pagination( $args = array() ) {
 
 
 function applayers_customize_register( $wp_customize ) {
+  // social section
   $wp_customize->add_setting( 'header_social' , array(
     'default'   => __('Share Your Favorite Mobile Apps With Your Friends', 'applayers'),
     'transport' => 'refresh',
@@ -232,7 +233,116 @@ function applayers_customize_register( $wp_customize ) {
       'section'  => 'social_section',
       'settings' => 'header_social',
       'type'     => 'text'
-    )
-  );
+  ) );
+
+  // facebook_social
+  $wp_customize->add_setting( 'facebook_social' , array(
+    'default'   => __('Url facebook', 'applayers'),
+    'transport' => 'refresh',
+  ) );
+
+  $wp_customize->add_control(
+    'facebook_social',
+    array(
+      'label'    => __( 'facebook url', 'applyaers' ),
+      'section'  => 'social_section',
+      'settings' => 'facebook_social',
+      'type'     => 'text'
+  ) );
+
+  // twitter
+  $wp_customize->add_setting( 'twitter_social' , array(
+    'default'   => __('Url twitter', 'applayers'),
+    'transport' => 'refresh',
+  ) );
+
+  $wp_customize->add_control(
+    'twitter_social',
+    array(
+      'label'    => __( 'twitter url', 'applyaers' ),
+      'section'  => 'social_section',
+      'settings' => 'twitter_social',
+      'type'     => 'text'
+  ) );
+
+  // linkedin
+  $wp_customize->add_setting( 'linkedin' , array(
+    'default'   => __('Url linkedin', 'applayers'),
+    'transport' => 'refresh',
+  ) );
+
+  $wp_customize->add_control(
+    'linkedin_social',
+    array(
+      'label'    => __( 'linkedin url', 'applyaers' ),
+      'section'  => 'social_section',
+      'settings' => 'linkedin_social',
+      'type'     => 'text'
+  ) );
+
+  // google+
+  $wp_customize->add_setting( 'googleplus_social' , array(
+    'default'   => __('Url google+', 'applayers'),
+    'transport' => 'refresh',
+  ) );
+
+  $wp_customize->add_control(
+    'googleplus_social',
+    array(
+      'label'    => __( 'google+ url', 'applyaers' ),
+      'section'  => 'social_section',
+      'settings' => 'googleplus_social',
+      'type'     => 'text'
+  ) );
+
+  // youtube
+  $wp_customize->add_setting( 'youtube_social' , array(
+    'default'   => __('Url youtube', 'applayers'),
+    'transport' => 'refresh',
+  ) );
+
+  $wp_customize->add_control(
+    'youtube_social',
+    array(
+      'label'    => __( 'youtube url', 'applyaers' ),
+      'section'  => 'social_section',
+      'settings' => 'youtube_social',
+      'type'     => 'text'
+  ) );
+
+  // instagram
+  $wp_customize->add_setting( 'instagram_social' , array(
+    'default'   => __('Url instagram', 'applayers'),
+    'transport' => 'refresh',
+  ) );
+
+  $wp_customize->add_control(
+    'instagram_social',
+    array(
+      'label'    => __( 'instagram url', 'applyaers' ),
+      'section'  => 'social_section',
+      'settings' => 'instagram_social',
+      'type'     => 'text'
+  ) );
+
+  // footer settigs
+  $wp_customize->add_section( 'footer_settings' , array(
+      'title'      => __( 'Footer settings', 'applayers' ),
+      'priority'   => 30,
+  ) );
+
+  $wp_customize->add_setting( 'copy_footer' , array(
+    'default'   => __('Copyright text', 'applayers'),
+    'transport' => 'refresh',
+  ) );
+
+  $wp_customize->add_control(
+    'copy_footer',
+    array(
+      'label'    => __( 'Copyright text', 'applyaers' ),
+      'section'  => 'footer_settings',
+      'settings' => 'copy_footer',
+      'type'     => 'text'
+  ) );
 }
 add_action( 'customize_register', 'applayers_customize_register' );
