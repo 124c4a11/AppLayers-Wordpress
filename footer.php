@@ -4,7 +4,7 @@
         <div class="col-md-12">
 
           <div class="footer_top">
-            <h4> Share Your Favorite Mobile Apps With Your Friends </h4>
+            <h4><?php echo get_theme_mod('header_social'); ?></h4>
 
             <ul>
               <li> <a href="http://facebook.com/"> <i class="fa fa-facebook" aria-hidden="true"></i> </a> </li>
