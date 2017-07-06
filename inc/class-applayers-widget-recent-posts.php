@@ -1,6 +1,6 @@
 <?php
 /**
- * Widget API: WP_Widget_Recent_Posts class
+ * Widget API: Applayers_Widget_Recent_Posts class
  *
  * @package WordPress
  * @subpackage Widgets

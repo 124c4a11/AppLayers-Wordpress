@@ -2,9 +2,12 @@
 
 require get_template_directory() . '/inc/class-applayers-widget-recent-posts.php';
 
+require get_template_directory() . '/inc/class-applayers-widget-subscribe-form.php';
+
 
 function applayers_register_foo_widget() {
 	register_widget( 'Applayers_Widget_Recent_Posts' );
+	register_widget( 'Applayers_Widget_Subscribe' );
 }
 add_action( 'widgets_init', 'applayers_register_foo_widget' );
 

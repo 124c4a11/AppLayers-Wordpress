@@ -544,7 +544,13 @@ article.blog_post {
 }
 
 
+.widget_subscribe h6 {
+  color: #fff;
+}
 
+.widget_subscribe h6::after {
+  color: rgba(255, 255, 255, .5);
+}
 
 
 /*---------coming soon--------*/
