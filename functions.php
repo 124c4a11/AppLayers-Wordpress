@@ -1,5 +1,14 @@
 <?php
 
+require get_template_directory() . '/inc/class-applayers-widget-recent-posts.php';
+
+
+function applayers_register_foo_widget() {
+	register_widget( 'Applayers_Widget_Recent_Posts' );
+}
+add_action( 'widgets_init', 'applayers_register_foo_widget' );
+
+
 function applayers_setup() {
   load_theme_textdomain('applayers');
 
@@ -13,6 +22,8 @@ function applayers_setup() {
 
   add_theme_support('post-thumbnails');
   set_post_thumbnail_size(730, 446);
+
+  add_image_size('applyaers-recent-post', 80, 80, true);
 
   add_theme_support('html5', array(
     'search-form',
@@ -364,6 +375,9 @@ function applayers_widgets_init() {
 add_action( 'widgets_init', 'applayers_widgets_init' );
 
 
+/**
+ * Categories
+ */
 class Walker_Categories_Applayers extends Walker_Category {
   /**
    * Starts the list before the elements are added.
@@ -557,3 +571,18 @@ function applayers_widget_categories($args) {
   return $args;
 }
 add_filter('widget_categories_args', 'applayers_widget_categories');
+
+
+/**
+ * Tag cloud
+*/
+
+function applayers_tag_cloud($args) {
+  $args['format'] = 'list';
+  $args['smallest'] = 14;
+  $args['largest'] = 14;
+  $args['unit'] = 'px';
+
+  return $args;
+}
+add_filter('widget_tag_cloud_args','applayers_tag_cloud');
