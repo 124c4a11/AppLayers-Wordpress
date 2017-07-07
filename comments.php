@@ -33,6 +33,8 @@ if ( post_password_required() )
           'style'       => 'ol',
           'short_ping'  => true,
           'avatar_size' => 74,
+          'callback' => 'applayers_comments_list',
+          'max_depth' => 2
         ) );
       ?>
     </ol><!-- .comment-list -->
