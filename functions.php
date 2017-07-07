@@ -13,7 +13,7 @@ add_action( 'widgets_init', 'applayers_register_foo_widget' );
 
 
 function applayers_setup() {
-  load_theme_textdomain('applayers');
+  load_theme_textdomain('applayers', get_template_directory() .  '/lang');
 
   add_theme_support('title-tag');
 
