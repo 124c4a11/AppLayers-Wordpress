@@ -312,6 +312,7 @@ article.blog_post:last-child {
   border-bottom: medium none;
 }
 
+
 .page-numbers {
   clear: both;
   margin: 30px auto;
@@ -2358,4 +2359,8 @@ article {  margin: 0 0 70px;}
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+}
+
+.blog_post.page_wrap {
+  padding-top: 54px;
 }

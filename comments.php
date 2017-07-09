@@ -5,8 +5,8 @@
  * The area of the page that contains comments and the comment form.
  *
  * @package WordPress
- * @subpackage AppLayers
- * @since Applayers 1.0
+ * @subpackage applayers
+ * @since applayers 1.0
  */
 
 /*
@@ -22,7 +22,7 @@ if ( post_password_required() )
   <?php if ( have_comments() ) : ?>
     <h3 class="comments-title">
       <?php
-        printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'twentythirteen' ),
+        printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'applayers' ),
           number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
       ?>
     </h3>
@@ -44,14 +44,14 @@ if ( post_password_required() )
       if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
     ?>
     <nav class="navigation comment-navigation" role="navigation">
-      <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'twentythirteen' ); ?></h1>
-      <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'twentythirteen' ) ); ?></div>
-      <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentythirteen' ) ); ?></div>
+      <h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'applayers' ); ?></h1>
+      <div class="nav-previous"><?php previous_comments_link( esc_thml__( '&larr; Older Comments', 'applayers' ) ); ?></div>
+      <div class="nav-next"><?php next_comments_link( esc_thml__( 'Newer Comments &rarr;', 'applayers' ) ); ?></div>
     </nav><!-- .comment-navigation -->
     <?php endif; // Check for comment navigation ?>
 
     <?php if ( ! comments_open() && get_comments_number() ) : ?>
-    <p class="no-comments"><?php _e( 'Comments are closed.' , 'twentythirteen' ); ?></p>
+    <p class="no-comments"><?php esc_html_e( 'Comments are closed.' , 'applayers' ); ?></p>
     <?php endif; ?>
 
   <?php endif; // have_comments() ?>
@@ -68,7 +68,7 @@ if ( post_password_required() )
 
         'class_submit' => 'btn btn-default',
         'submit_field' => '<div class="section_sub_btn">%1$s %2$s</div>',
-        'label_submit' => esc_html__('Send Message', 'applayout'),
+        'label_submit' => esc_html__('Send Message', 'applayerslayout'),
 
         'comment_field' => '<div class="comment-form-comment form-group"><label for="comment">' . esc_html_x( 'Messsage : ', 'applayers' ). ( $req ? '<span class="required">*</span>' : '' ) . '</label> <textarea id="comment" class="form-textarea" name="comment" rows="3" aria-required="true"></textarea></div>'
       );
